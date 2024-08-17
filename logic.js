@@ -1,5 +1,8 @@
 const gridSize = prompt('Enter Grid Size: ')
 const container = document.querySelector('#grid-container')
+const changebgColor = document.querySelector('#changebgColor')
+const removeOutline = document.querySelector('#removeOutline')
+
 
 // create grid based on input
 function createGrid (gridSize) {
@@ -24,7 +27,9 @@ function createGrid (gridSize) {
     }
     let isDrawing = false
     const cells = document.querySelectorAll('.gridCell')
+    
     cells.forEach(cell => {
+        changebgColor.addEventListener('click', () => {cell.style.backgroundColor= 'black'})
         cell.addEventListener('mousedown', () => {
             isDrawing = true 
             cell.style.backgroundColor = 'red'
@@ -51,7 +56,7 @@ function createGrid (gridSize) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    createGrid(gridSize)
+    createGrid(gridSize);
 })
 
 

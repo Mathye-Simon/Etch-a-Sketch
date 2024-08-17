@@ -1,3 +1,6 @@
+main {
+    display: flex;
+}
 #grid-container {
     display: flex;
     flex-direction: column;
@@ -5,8 +8,18 @@
     height: 75vh;
     background-color: #f0f0f0;
     margin: auto;
+    margin-left: 50px;
+    margin-top: 60px;
 }
-
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+button {
+    height: 30px;
+}
 .gridRow {
     display: flex;
     flex-direction: row;
