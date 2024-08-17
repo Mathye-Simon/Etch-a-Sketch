@@ -13,7 +13,7 @@ function createGrid (gridSize) {
         gridRow.className= 'gridRow'
         container.appendChild(gridRow)
 
-        // cells
+    // cells
         for (let j = 1; j<= gridSize; j++) {
             const gridCell = document.createElement('grid')
             gridCell.className = 'gridCell'
@@ -22,19 +22,36 @@ function createGrid (gridSize) {
         
 
     }
-
+    let isDrawing = false
     const cells = document.querySelectorAll('.gridCell')
     cells.forEach(cell => {
+        cell.addEventListener('mousedown', () => {
+            isDrawing = true 
+            cell.style.backgroundColor = 'red'
+            })
+
         cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = 'red'
+            if (isDrawing) {
+                cell.style.backgroundColor
+            }
+        })
+        
+        cell.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        cell.addEventListener('mouseleave', () => {
+            if (isDrawing) {
+                cell.style.backgroundColor = 'red';
+            }
         })
     })
         
 
 }
 
-
-createGrid(gridSize)
-alert('try different sizes!')
+document.addEventListener('DOMContentLoaded', () => {
+    createGrid(gridSize)
+})
 
 
