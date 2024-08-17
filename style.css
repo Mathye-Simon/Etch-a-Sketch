@@ -1,8 +1,8 @@
 #grid-container {
     display: flex;
     flex-direction: column;
-    width: 80vw;
-    height: 100vh;
+    width: 50vw;
+    height: 75vh;
     background-color: #f0f0f0;
     margin: auto;
 }
@@ -10,14 +10,17 @@
 .gridRow {
     display: flex;
     flex-direction: row;
-    flex: 1; /* Allows rows to take up equal height */
+    flex: 1;
+    background-color: rgb(253, 252, 252);
+    outline: rgb(216, 214, 214) 2px solid; /* Allows rows to take up equal height */
 }
 
-.grid-cell {
+.gridCell {
     flex: 1; /* Allows cells to take up equal width within the row */
-    background-color: #ddd;
-    border: 1px solid #ccc;
+    background-color: #fdfdfd;
+    border: 1px solid #f1f1f1;
     box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
+
 
 
