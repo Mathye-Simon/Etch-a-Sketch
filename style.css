@@ -1,0 +1,23 @@
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: auto;
+}
+
+.gridRow {
+    display: flex;
+    flex-direction: row;
+    flex: 1; /* Allows rows to take up equal height */
+}
+
+.grid-cell {
+    flex: 1; /* Allows cells to take up equal width within the row */
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+
