@@ -1,37 +1,56 @@
-main {
+.mother_of_all {
     display: flex;
+    width: 50vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    margin: auto
 }
 #grid-container {
     display: flex;
     flex-direction: column;
-    width: 50vw;
-    height: 75vh;
+    width: 40vw;
+    height: 70vh;
     background-color: #f0f0f0;
     margin: auto;
     margin-left: 50px;
     margin-top: 60px;
 }
+.gridSize {
+    font-size: 15px;
+    height: 22px;
+    width: 40px;
+}
+
+select {
+    height: 28px;
+}
 .buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 50vw;
+    margin: auto;
     gap: 8px;
-    justify-content: center;
+    margin-left: 50px;
+    margin-top: 10px;
 }
-button {
-    height: 30px;
+
+input {
+    height: 28px;
+    width: 90px;
 }
 .gridRow {
     display: flex;
     flex-direction: row;
     flex: 1;
-    background-color: rgb(253, 252, 252);
-    outline: rgb(216, 214, 214) 2px solid; /* Allows rows to take up equal height */
+    /* background-color: rgb(253, 252, 252);
+    outline: rgb(216, 214, 214) 2px solid; Allows rows to take up equal height */
 }
 
 .gridCell {
     flex: 1; /* Allows cells to take up equal width within the row */
-    background-color: #fdfdfd;
-    border: 1px solid #f1f1f1;
+    /* background-color: #fdfdfd;
+    border: 1px solid #f1f1f1; */
     box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 

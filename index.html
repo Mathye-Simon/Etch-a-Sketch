@@ -7,14 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class= 'buttons'>
-            <button id = "changebgColor">Change background to black</button>
-            <button id = "removeOutline">Remove outline</button>
-        </div>
-        <div id="grid-container" draggable="false"></div>
+    <div class="mother_of_all">
         
+        
+        <div id="grid-container" draggable="false"></div>
+        <div class= 'buttons'>
+            <input type="button" value="Light/Dark" class="backgroundButton">
+            <label >
+                Change grid size
+                <input type="text" placeholder="50" class="gridSize" >
+            </label>
+            <input type="button" value="Eraser" class="button">
+
+            <label>Pick color
+                <select>
+                    <option value="">Red</option>
+                    <option value="">Black</option>
+                    <option value="">Yellow</option>
+                    <option value="">Green</option>
+                    <option value="">Blue</option>
+                </select>
+            </label>
+        </div>
+    </div>
         <script src="logic.js"></script>
-    </main>
+    
 </body>
 </html>
