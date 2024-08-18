@@ -1,7 +1,14 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    margin: 0px;
+}
 .mother_of_all {
     display: flex;
     width: 50vw;
-    height: 100vh;
+    height: 80vh;
     flex-direction: column;
     align-items: center;
     margin: auto
@@ -11,16 +18,18 @@
     flex-direction: column;
     width: 40vw;
     height: 70vh;
-    background-color: #f0f0f0;
+    background-color: white;
     margin: auto;
     margin-left: 50px;
     margin-top: 60px;
 }
-.gridSize {
-    font-size: 15px;
-    height: 22px;
-    width: 40px;
+#gridSize {
+    height: 28px;
+    padding: 0px;
+    margin: 0px;
+    width: 110px;
 }
+
 
 select {
     height: 28px;
@@ -33,6 +42,7 @@ select {
     gap: 8px;
     margin-left: 50px;
     margin-top: 10px;
+    flex: 1;
 }
 
 input {
@@ -43,8 +53,6 @@ input {
     display: flex;
     flex-direction: row;
     flex: 1;
-    /* background-color: rgb(253, 252, 252);
-    outline: rgb(216, 214, 214) 2px solid; Allows rows to take up equal height */
 }
 
 .gridCell {

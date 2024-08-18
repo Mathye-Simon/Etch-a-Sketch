@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Etch-a-Sketch</h1>
     <div class="mother_of_all">
         
         
         <div id="grid-container" draggable="false"></div>
+        
         <div class= 'buttons'>
-            <input type="button" value="Light/Dark" class="backgroundButton">
-            <label >
-                Change grid size
-                <input type="text" placeholder="50" class="gridSize" >
-            </label>
-            <input type="button" value="Eraser" class="button">
+            <!-- <input type="button" value="Light/Dark" class="backgroundButton"> -->
+            
+            <input type="button" value="Change Grid Size" id="gridSize" >
+            
+            <input type="button" value="Eraser" class="button" id="Eraser">
 
             <label>Pick color
-                <select>
-                    <option value="">Red</option>
-                    <option value="">Black</option>
-                    <option value="">Yellow</option>
-                    <option value="">Green</option>
-                    <option value="">Blue</option>
+                <select class="selectColor">
+                    <option value="red">Red</option>
+                    <option value="black">Black</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
                 </select>
             </label>
         </div>
