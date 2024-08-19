@@ -1,23 +1,41 @@
-let changeGridSize = document.querySelector('#gridSize')
-let gridSize = parseInt(prompt('Please enter a number between 2 - 100'))
-const eraser = document.querySelector('#Eraser')
+const eraser = document.querySelector('#Eraser');
+const selectColor = document.querySelector('.selectColor');
+const resetBtn = document.querySelector('.resetBtn');
+let selectedColor = selectColor.value;
 const container = document.querySelector('#grid-container')
-const selectColor = document.querySelector('.selectColor')
-let selectedColor = selectColor.value
-const resetBtn = document.querySelector('.resetBtn')
+const changeGridSize = document.querySelector('#gridSize');
 
+document.addEventListener('DOMContentLoaded', () => {
+    let gridSize = parseInt(prompt('Please enter a number between 2 - 100')) || 35;
+    createGrid(gridSize);
 
-// erasing and color picking
-selectColor.addEventListener('click', () => {selectedColor = selectColor.value})   
-eraser.addEventListener('click', ()=> {
-    selectedColor='white'
-})
+    // Event listeners
+    changeGridSize.addEventListener('click', () => {
+        gridSize = parseInt(prompt('Please enter a number between 2 - 100')) || 35;
+        createGrid(gridSize);
+    });
 
-const removeOutline = document.querySelector('#removeOutline')
+    
 
+    selectColor.addEventListener('change', () => {
+        selectedColor = selectColor.value;
+    });
+
+    eraser.addEventListener('click', () => {
+        selectedColor = 'white';
+    });
+
+    resetBtn.addEventListener('click', () => {
+        document.querySelectorAll('.gridCell').forEach(cell => {
+            cell.style.backgroundColor = 'white';
+        });
+    });
+});
 
 // create grid based on input
 function createGrid (gridSize) {
+    // clear before creating a new one
+    container.innerHTML = '';
     // nothing above 100!
     if (gridSize > 100 || gridSize < 2 || Number.isInteger(gridSize) == false ) {
         gridSize = 35
@@ -31,7 +49,7 @@ function createGrid (gridSize) {
 
     // cells
         for (let j = 1; j<= gridSize; j++) {
-            const gridCell = document.createElement('grid')
+            const gridCell = document.createElement('div')
             gridCell.className = 'gridCell'
             gridRow.appendChild(gridCell)
         }
@@ -69,8 +87,4 @@ function createGrid (gridSize) {
     })
 }
 
-changeGridSize.addEventListener('click', ()=> {
-    location.reload()
-})
-document.addEventListener('DOMContentLoad',createGrid(gridSize))
 
