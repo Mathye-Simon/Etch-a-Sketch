@@ -6,12 +6,14 @@ const container = document.querySelector('#grid-container')
 const changeGridSize = document.querySelector('#gridSize');
 
 document.addEventListener('DOMContentLoaded', () => {
-    let gridSize = parseInt(prompt('Please enter a number between 2 - 100')) || 35;
+    let gridSize = parseInt(prompt('Please enter a number between 2 - 100'));
+
     createGrid(gridSize);
 
     // Event listeners
     changeGridSize.addEventListener('click', () => {
-        gridSize = parseInt(prompt('Please enter a number between 2 - 100')) || 35;
+        gridSize = parseInt(prompt('Please enter a number between 2 - 100'));
+
         createGrid(gridSize);
     });
 
@@ -36,11 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function createGrid (gridSize) {
     // clear before creating a new one
     container.innerHTML = '';
-    // nothing above 100!
-    if (gridSize > 100 || gridSize < 2 || Number.isInteger(gridSize) == false ) {
+        // nothing above 100!
+    if (Number.isNaN(gridSize)||  gridSize < 2 || gridSize > 100) { 
         gridSize = 35
+        isInvalidGridSize()
     }
-
+    
     // create rows
     for (let i = 1; i <= gridSize; i++) {
         const gridRow = document.createElement('div')
@@ -81,6 +84,10 @@ function createGrid (gridSize) {
             }
         })
     })
+}
+
+function isInvalidGridSize() {
+        alert('Invalid grid size. Grid size must be a number between 2 and 100. Reseting to default size.')
 }
 
 
