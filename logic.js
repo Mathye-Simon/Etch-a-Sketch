@@ -4,6 +4,8 @@ const eraser = document.querySelector('#Eraser')
 const container = document.querySelector('#grid-container')
 const selectColor = document.querySelector('.selectColor')
 let selectedColor = selectColor.value
+const resetBtn = document.querySelector('.resetBtn')
+
 
 // erasing and color picking
 selectColor.addEventListener('click', () => {selectedColor = selectColor.value})   
@@ -36,6 +38,7 @@ function createGrid (gridSize) {
         
 
     }
+    
     let isDrawing = false
     const cells = document.querySelectorAll('.gridCell')
     cells.forEach(cell => {
@@ -58,6 +61,10 @@ function createGrid (gridSize) {
             if (isDrawing) {
                 cell.style.backgroundColor = selectedColor;
             }
+        })
+        // for removing color from canvas
+        resetBtn.addEventListener('click', () => {
+            cell.style.backgroundColor = 'white'
         })
     })
 }

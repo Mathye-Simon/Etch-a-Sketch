@@ -3,7 +3,10 @@ body {
 }
 
 h1 {
-    margin: 0px;
+    margin: auto;
+    outline: yellow 2px solid;
+    width: 409px;
+    color: rgb(100, 100, 238);
 }
 .mother_of_all {
     display: flex;
@@ -16,11 +19,10 @@ h1 {
 #grid-container {
     display: flex;
     flex-direction: column;
-    width: 40vw;
-    height: 70vh;
+    width: 30vw;
+    height: 80vh;
     background-color: white;
     margin: auto;
-    margin-left: 50px;
     margin-top: 60px;
 }
 #gridSize {
@@ -37,10 +39,10 @@ select {
 .buttons {
     display: flex;
     flex-direction: row;
-    width: 50vw;
+    width: 409px;
     margin: auto;
+    justify-content: space-between;
     gap: 8px;
-    margin-left: 50px;
     margin-top: 10px;
     flex: 1;
 }
