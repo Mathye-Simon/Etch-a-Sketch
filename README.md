@@ -1,1 +1,1 @@
-Just to flex my DOM manipulation skills I am going to build a browser version of something like a sketchpad. Lets dive in!
+Just to flex my DOM manipulation skills I am going to build a browser version of something like a sketchpad.Please check out the live preview by clicking this link: https://mathye-simon.github.io/Etch-a-Sketch/ 
