@@ -1,7 +1,7 @@
 const eraser = document.querySelector('#Eraser');
 const selectColor = document.querySelector('.selectColor');
 const resetBtn = document.querySelector('.resetBtn');
-let selectedColor = selectColor.value;
+let   selectedColor = selectColor.value;
 const container = document.querySelector('#grid-container')
 const changeGridSize = document.querySelector('#gridSize');
 
@@ -79,10 +79,6 @@ function createGrid (gridSize) {
             if (isDrawing) {
                 cell.style.backgroundColor = selectedColor;
             }
-        })
-        // for removing color from canvas
-        resetBtn.addEventListener('click', () => {
-            cell.style.backgroundColor = 'white'
         })
     })
 }
